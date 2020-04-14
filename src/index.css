@@ -25,7 +25,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.timer {
+  width: 25rem;
+}
 button {
   display: inline-block;
   border: none;

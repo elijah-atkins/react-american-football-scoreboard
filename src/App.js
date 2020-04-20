@@ -29,8 +29,11 @@ function App() {
       const timer =
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     return () => clearInterval(timer);
+    } else {
+      setCounter(counter);
+
     }
-  }, [counter]);
+  }, [counter, pause]);
   return (
     <div className="container">
       <section className="scoreboard">
@@ -64,6 +67,11 @@ function App() {
           <button className="resetTimerButton" onClick={()=>{
             setCounter(4500)
           }}>Reset Timer</button>
+          <button className="pauseTimerButton" onClick={()=> {
+            setPause(!pause)
+
+          }}>Pause/Start Timer</button>
+
         </div>
       </section>
     </div>
